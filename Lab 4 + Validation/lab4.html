@@ -3,7 +3,7 @@
 <head>
     <title>Lab4</title>
     <style>
-        /* Global Styles */
+     
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
@@ -20,14 +20,14 @@
             position: relative;
         }
 
-        /* Logo at top center */
+      
         #logo {
             display: block;
             margin: 10px auto 0 auto;
             height: 100px;
         }
 
-        /* Main container */
+      
         .container {
             border: 3px solid #000000;
             width: 100%;
@@ -36,7 +36,7 @@
             box-sizing: border-box;
         }
 
-        /* Left panel */
+     
         .left-panel {
             width: 50%;
             display: flex;
@@ -61,7 +61,7 @@
             background-color: #09a5cc;
         }
 
-        /* Right panel */
+    
         .right-panel {
             width: 50%;
             display: flex;
@@ -130,7 +130,7 @@
             justify-content: center;
             background-color: #3757b1;
         }
-        /* Validation Message Box Styles */
+      
 .validation-message {
     position: fixed;
     top: 20px;
@@ -157,7 +157,7 @@
     display: block;
 }
 
-/* Error highlighting for invalid fields */
+
 .error-field {
     border-color: #ff4444 !important;
     background-color: #ffeeee !important;
@@ -231,10 +231,10 @@
     form.addEventListener('submit', function(event) {
         event.preventDefault();
         
-        // Clear previous error highlights
+      
         clearErrorHighlights();
         
-        // Validate all fields
+      
         const isNameValid = validateName();
         const isEmailValid = validateEmail();
         const isPasswordValid = validatePassword();
@@ -246,7 +246,7 @@
         if (isNameValid && isEmailValid && isPasswordValid && 
             isLocationValid && isPostalCodeValid && isCityValid && isTermsValid) {
             showSuccessMessage();
-            // form.submit(); // Uncomment to actually submit the form
+      
         }
     });
     
@@ -255,7 +255,7 @@
         validationMessage.style.backgroundColor = isError ? '#ff4444' : '#4CAF50';
         validationMessage.classList.add('show');
         
-        // Auto-hide after 5 seconds
+    
         setTimeout(() => {
             validationMessage.classList.remove('show');
         }, 5000);
@@ -298,7 +298,7 @@
     function validateEmail() {
         const emailInput = document.getElementById('email');
         const emailValue = emailInput.value.trim();
-        // Updated regex pattern to match AIUB student email format
+     
         const emailRegex = /^[0-9]{2}-[0-9]{5}(-[0-9])?@student\.aiub\.edu$/;
         
         if (emailValue === '') {
